@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotChecker — Parking near Torgersen Hall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="SpotChecker logo">
+        SpotChecker
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active">Find parking</a></li>
+          <li><a href="list.html">Lots</a></li>
+          <li><a href="report.html">Report</a></li>
+          <li><a href="detail.html">Favorites</a></li>
+        </ul>
+      </nav>
+      <form class="header-search" action="search.html" method="get" role="search">
+        <label class="sr-only" for="site-search">Search SpotChecker</label>
+        <input type="text" id="site-search" name="q" placeholder='Try "parking pass"'>
+        <button type="submit" class="btn">Search</button>
+      </form>
+      <span class="account-dot" role="img" aria-label="Your account">JW</span>
+    </div>
+  </header>
+
+  <!-- This page is the ALTERNATE STATE of the home page: after the user
+       submits a destination, the generic landing view is replaced by a
+       ranked list of recommended lots and a destination-centered map. -->
+  <main class="container">
+    <h1>Parking near Torgersen Hall</h1>
+    <p>Ranked by a mix of walking distance and how many spaces each lot has right now.
+       Your top pick is highlighted below.</p>
+
+    <div class="page-grid">
+      <!-- Sidebar: filled destination + ranked recommendations + preference -->
+      <div class="sidebar">
+        <form class="search-box card" action="results.html" method="get">
+          <div class="field">
+            <label for="destination">Destination</label>
+            <input type="search" id="destination" name="destination" value="Torgersen Hall">
+          </div>
+          <div class="field">
+            <label for="priority">I care more about</label>
+            <select id="priority" name="priority">
+              <option value="balanced">A balance of both</option>
+              <option value="closer">Getting closer</option>
+              <option value="emptier">Finding an emptier lot</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Update results</button>
+        </form>
+
+        <h2>Recommended lots</h2>
+        <ul class="lot-list">
+          <li class="rec-top">
+            <span>
+              <span class="lot-name">1 · Perry Street Garage</span><br>
+              <span class="lot-meta">2 min walk · ~52 open</span>
+            </span>
+            <span class="pill open">Top pick</span>
+          </li>
+          <li>
+            <span>
+              <span class="lot-name">2 · North End Garage</span><br>
+              <span class="lot-meta">5 min walk · ~30 open</span>
+            </span>
+            <span class="pill open">Open</span>
+          </li>
+          <li>
+            <span>
+              <span class="lot-name">3 · Kent Square Lot</span><br>
+              <span class="lot-meta">7 min walk · ~14 open</span>
+            </span>
+            <span class="pill some">Some</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main panel: map centered on destination -->
+      <div class="main-panel">
+        <h2>Map</h2>
+        <div class="map">
+          <img src="images/map.svg" alt="Map centered on Torgersen Hall with the three
+               recommended parking lots marked around it">
+        </div>
+        <p class="lot-meta">The pin marks Torgersen Hall; nearby markers are your ranked
+           lots. Open the <a href="detail.html">top pick</a> for its live count and
+           recent reports.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 SpotChecker · A Virginia Tech student project</span>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">How it works</a></li>
+        <li><a href="index.html">Help</a></li>
+        <li><a href="index.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- jQuery (local copy) loaded first, then our own script -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

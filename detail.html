@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotChecker — Perry Street Garage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="SpotChecker logo">
+        SpotChecker
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Find parking</a></li>
+          <li><a href="list.html">Lots</a></li>
+          <li><a href="report.html">Report</a></li>
+          <li><a href="detail.html" class="active">Favorites</a></li>
+        </ul>
+      </nav>
+      <form class="header-search" action="search.html" method="get" role="search">
+        <label class="sr-only" for="site-search">Search SpotChecker</label>
+        <input type="text" id="site-search" name="q" placeholder='Try "parking pass"'>
+        <button type="submit" class="btn">Search</button>
+      </form>
+      <span class="account-dot" role="img" aria-label="Your account">JW</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Perry Street Garage</h1>
+    <p class="lot-meta">Faculty / student permit · Capacity 320 · West campus</p>
+
+    <div class="page-grid">
+      <!-- Sidebar: live count, actions, recent reports -->
+      <div class="sidebar">
+        <div class="count-box">
+          <span class="count">52</span>
+          <div class="lot-meta">open spaces right now</div>
+          <span class="pill open">Wide open</span>
+        </div>
+
+        <p style="margin-top:16px;">
+          <!-- inline style justified: one-off top spacing unique to this button pair -->
+          <a href="report.html" class="btn btn-primary">Report this lot</a>
+          <a href="detail.html" class="btn">Save to favorites</a>
+        </p>
+
+        <h2>Recent reports</h2>
+        <ul class="lot-list">
+          <li>
+            <span><span class="lot-name">~52 open</span><br>
+            <span class="lot-meta">Reported 6 minutes ago</span></span>
+            <span class="pill open">Open</span>
+          </li>
+          <li>
+            <span><span class="lot-name">Some spots</span><br>
+            <span class="lot-meta">Reported 24 minutes ago</span></span>
+            <span class="pill some">Some</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main panel: location map + typical fill -->
+      <div class="main-panel">
+        <h2>Location</h2>
+        <div class="map">
+          <img src="images/map.svg" alt="Map showing Perry Street Garage marked in green
+               near the west side of the Virginia Tech campus">
+        </div>
+
+        <h2>Typical fill by time of day</h2>
+        <p>This garage is usually wide open before 9:00 AM, fills quickly between 9:30 and
+           11:00 AM as morning classes begin, stays near capacity through early afternoon,
+           and empties out after 3:00 PM. If you're arriving for a mid-morning class,
+           check the live count before you drive over.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 SpotChecker · A Virginia Tech student project</span>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">How it works</a></li>
+        <li><a href="index.html">Help</a></li>
+        <li><a href="index.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- jQuery (local copy) loaded first, then our own script -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
