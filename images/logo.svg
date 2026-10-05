@@ -1,6 +1,0 @@
-<!-- Image source: original artwork created by Jasmine Walker for SpotChecker (Project 2). Not copied from any external site. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SpotChecker logo">
-  <circle cx="32" cy="32" r="30" fill="#6b4ea3"/>
-  <path d="M32 14c-7.2 0-13 5.6-13 12.6 0 9 13 21.4 13 21.4s13-12.4 13-21.4C45 19.6 39.2 14 32 14z" fill="#ffffff"/>
-  <text x="32" y="32" font-family="Poppins, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#4b3475" text-anchor="middle" dominant-baseline="central">P</text>
-</svg>
